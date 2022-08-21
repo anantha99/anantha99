@@ -30,7 +30,7 @@ Here are some ideas to get you started:
 <hr>
 :woman_technologist: About Me :
 <br>
-- 🔭 I’m currently working on machine learning projects on audio and video.
+- 🔭 Iam curious about AI and the impact it can create in this world. I want to be part of that impact too. If you are someone working on impactful project for the betterment of people using AI technologies you can reach out to me on LinkedIN. I would love to contribute.
 <br>
 - 🌱 I’m currently learning deep learning from coursera.
 <br>
