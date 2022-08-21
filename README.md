@@ -36,3 +36,8 @@ Here are some ideas to get you started:
 <br>
 - 👯 I’m looking to collaborate on projects related to machine learning. Reach me out on LinkedIN.
 <br>
+<hr>
+
+## Some of the projects that I have worked on :
+[Sound Classification](https://github.com/anantha99/Sound_Classification)
+
