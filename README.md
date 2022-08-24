@@ -40,4 +40,5 @@ Here are some ideas to get you started:
 
 ## Some of the projects that I have worked on :
 [Sound Classification](https://github.com/anantha99/Sound_Classification)
+[Text Classification Using NLP](https://github.com/anantha99/Natural_Language_Processing)
 
