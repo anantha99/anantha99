@@ -39,7 +39,7 @@ Here are some ideas to get you started:
 <hr>
 
 ## Some of the projects that I have worked on :
-[Sound Classification](https://github.com/anantha99/Sound_Classification)
+[Urban Sound Classification Using Deep Neural Networks](https://github.com/anantha99/Sound_Classification)
 <br>
 [Text Classification Using NLP](https://github.com/anantha99/Natural_Language_Processing)
 <br>
