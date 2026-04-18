@@ -37,6 +37,17 @@ You write Java. I review silently first, then ask pointed questions:
 - You rate your confidence 1–5 (goes into `progress.md`).
 - If < 3: problem gets scheduled for a bonus rep in 48 hrs.
 
+### Step 6 — I update memory (silent, automatic)
+After every Step 5 I:
+1. Append an `attempt` event to `memory/events.jsonl`.
+2. Upsert your problem record in `memory/state.json`.
+3. Recompute the affected pattern's `proficiency` + your `overall.level_score`
+   per `memory/level-rubric.md`.
+4. If a level threshold is crossed, I tell you and log a `level_up` event.
+
+You don't have to ask. Run `cat dsa-learning/memory/state.json | jq .overall`
+any time to see your current level.
+
 ## Hint ladder (smallest first)
 
 1. **Nudge:** "What are you iterating over?"

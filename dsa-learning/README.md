@@ -48,3 +48,6 @@ See `socratic-protocol.md` for the exact dialogue rules.
 | `socratic-protocol.md` | Rules for how we dialogue |
 | `problems/*.md` | One note per problem: approach, pitfalls, Big-O |
 | `solutions/**/*.java` | Your Java solutions, compilable |
+| `memory/state.json` | Live machine-readable state — your level, per-pattern proficiency, per-problem mastery. I update this silently after every problem. |
+| `memory/events.jsonl` | Append-only audit log of every attempt; can rebuild `state.json` if needed |
+| `memory/level-rubric.md` | How raw confidence/time/hints become level + proficiency |

@@ -1,5 +1,19 @@
 # 30-Day Schedule — Spaced Repetition
 
+## The non-negotiable daily target
+
+> **30 touches every day. No skip days. No "I'll catch up tomorrow."**
+
+Why "30 touches"? A *touch* is one pass on one problem. The math is fixed:
+
+```
+300 problems × 3 passes = 900 touches
+900 touches ÷ 30 days   = 30 touches/day
+```
+
+Miss a day → you owe 30 to tomorrow (= 60 the next day, which is humanly impossible).
+The system tracks deficit in `memory/state.json → overall.deficit_touches`.
+
 ## Math
 
 - 300 problems × 3 passes = **900 problem-touches**.
