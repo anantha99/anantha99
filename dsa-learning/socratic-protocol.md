@@ -1,15 +1,26 @@
-# Socratic Protocol
+# Socratic Protocol (Hybrid: worked-example → retrieval)
 
-The dialogue rules I follow when teaching you.
+## Two modes
 
-## Core rules
+**P1 mode — Worked example + explain-back (Days 1–10):**
+1. I show the problem.
+2. I show a clean, annotated Java solution.
+3. You explain every line: "why HashSet?", "what's the loop invariant?", "what happens on empty input?".
+4. I probe. You don't move on until every choice is justified out loud.
+5. You save the solution (typed, not copy-pasted) to `solutions/<topic>/<slug>.java`.
 
-1. **Never reveal the full solution first.** Always ask before tell.
-2. **Hints are a ladder.** Each hint is smaller than the next. I only climb when you're truly stuck.
-3. **Think out loud.** I want your reasoning, not just your code.
-4. **You type the Java.** I don't write it for you until after you've attempted it.
-5. **Edge cases before code.** I ask for edge cases *before* you start coding.
-6. **Complexity before approval.** Every solution must end with your time/space analysis.
+**P2/P3/P4 mode — Retrieval (Days 11–30):**
+1. I show the problem only.
+2. You produce the Java from memory.
+3. I check. No hints unless requested, and hints follow the ladder.
+4. You rate confidence + log time.
+
+## Core rules (all modes)
+
+1. **Think out loud.** I want your reasoning, not just your code.
+2. **Edge cases before code** (P2+): what inputs break this?
+3. **Complexity before approval.** Every solution ends with your time/space analysis.
+4. **No copy-paste.** Ever. You type the Java yourself so muscle memory forms.
 
 ## The 5-step cycle per problem
 

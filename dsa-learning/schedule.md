@@ -1,107 +1,102 @@
-# 30-Day Schedule — Spaced Repetition
+# 30-Day Schedule — 4 Passes on NeetCode 150
 
-## The non-negotiable daily target
+## Non-negotiable daily target (adaptive)
 
-> **30 touches every day. No skip days. No "I'll catch up tomorrow."**
+> **20 touches/day average.** Heavier at the start, lighter at the end.
 
-Why "30 touches"? A *touch* is one pass on one problem. The math is fixed:
+Math: 150 problems × 4 passes = **600 touches**. 600 / 30 = **20/day average**.
 
-```
-300 problems × 3 passes = 900 touches
-900 touches ÷ 30 days   = 30 touches/day
-```
+## Wave structure
 
-Miss a day → you owe 30 to tomorrow (= 60 the next day, which is humanly impossible).
-The system tracks deficit in `memory/state.json → overall.deficit_touches`.
+| Wave | Pass | Days | Touches/day | Per-problem time | Daily hours |
+|------|------|------|-------------|-------------------|-------------|
+| 1 | **P1 — worked example + explain-back** | 1–10 | 15 | ~25 min | ~3.5 hrs |
+| 2 | **P2 — solo solve from problem** | 11–18 | 19 | ~15 min | ~3.0 hrs |
+| 3 | **P3 — timed retrieval (≤ target time)** | 19–24 | 25 | ~10 min | ~2.5 hrs |
+| 4 | **P4 — verbal walkthrough** | 25–30 | 25 | ~5 min | ~1.5 hrs |
 
-## Math
+Total: 10×15 + 8×19 + 6×25 + 6×25 = **602 ≈ 600** ✓.
 
-- 300 problems × 3 passes = **900 problem-touches**.
-- 30 days × **30 touches/day** = 900.
-- Gap between passes ≈ **10 days** (long enough to force retrieval from long-term memory, short enough that nothing is lost).
+End-state target: **every touched problem ≤ 15 min** by Day 30.
 
-## Time budget (honest)
+## 10 batches of 15 problems (curriculum order)
 
-| Pass | Per problem | Per day |
-|------|-------------|---------|
-| 1 (learn) | ~20 min | ~10 hrs — the heaviest phase |
-| 2 (re-derive) | ~10 min | ~5 hrs |
-| 3 (speed) | ~5 min | ~2.5 hrs |
+- B1: #1–15, B2: #16–30, B3: #31–45, B4: #46–60, B5: #61–75,
+  B6: #76–90, B7: #91–105, B8: #106–120, B9: #121–135, B10: #136–150.
 
-If you can't hit 10 hrs/day, run the plan at **60% intensity**: 18 problems/day
-across 30 days, then finish reps in a 10-day "Sprint Finale" on weekends.
-What matters is the **3-touch discipline**, not the calendar.
+## Day-by-day
 
-## Batches
+| Day | Pass | Target | Batch(es) covered |
+|-----|------|--------|-------------------|
+| 1   | P1 | 15     | B1 (#1–15) |
+| 2   | P1 | 15     | B2 (#16–30) |
+| 3   | P1 | 15     | B3 |
+| 4   | P1 | 15     | B4 |
+| 5   | P1 | 15     | B5 |
+| 6   | P1 | 15     | B6 |
+| 7   | P1 | 15     | B7 |
+| 8   | P1 | 15     | B8 |
+| 9   | P1 | 15     | B9 |
+| 10  | P1 | 15     | B10 |
+| 11  | P2 | 19     | B1 + 4 from B2 |
+| 12  | P2 | 19     | rest of B2 + 8 from B3 |
+| 13  | P2 | 19     | rest of B3 + 12 from B4 |
+| 14  | P2 | 19     | rest of B4 + B5 partial |
+| 15  | P2 | 19     | B5 tail + B6 |
+| 16  | P2 | 19     | B7 partial |
+| 17  | P2 | 19     | B8 partial |
+| 18  | P2 | 19     | B9 + B10 |
+| 19  | P3 | 25     | B1 + 10 of B2 |
+| 20  | P3 | 25     | rest of B2 + B3 |
+| 21  | P3 | 25     | B4 + 10 of B5 |
+| 22  | P3 | 25     | rest of B5 + B6 |
+| 23  | P3 | 25     | B7 + 10 of B8 |
+| 24  | P3 | 25     | rest of B8 + B9 + 5 of B10 |
+| 25  | P4 | 25     | B1 + 10 of B2 |
+| 26  | P4 | 25     | rest of B2 + B3 |
+| 27  | P4 | 25     | B4 + 10 of B5 |
+| 28  | P4 | 25     | rest of B5 + B6 |
+| 29  | P4 | 25     | B7 + 10 of B8 |
+| 30  | P4 | 25     | rest of B8 + B9 + B10 |
 
-Split the 300 curriculum problems into **10 batches of 30**, in curriculum order:
+Exact problem IDs per day live in `memory/state.json → daily_targets[i].problems`.
 
-- Batch B1 = #1–30, B2 = #31–60, …, B10 = #271–300.
+## Auto-downgrade rule (safety valve)
 
-## Daily layout
+If by end of Day N the `memory/state.json → overall.deficit_touches` exceeds
+**40** (two days behind), the system automatically:
 
-| Day | Morning — Pass 1 (NEW) | Afternoon — Pass 2 (REVIEW) | Evening — Pass 3 (SPEED) |
-|-----|------------------------|------------------------------|---------------------------|
-| 1   | B1 (#1–30)             | —                            | —                         |
-| 2   | B2 (#31–60)            | —                            | —                         |
-| 3   | B3 (#61–90)            | —                            | —                         |
-| 4   | B4 (#91–120)           | —                            | —                         |
-| 5   | B5 (#121–150)          | —                            | —                         |
-| 6   | B6 (#151–180)          | —                            | —                         |
-| 7   | B7 (#181–210)          | —                            | —                         |
-| 8   | B8 (#211–240)          | —                            | —                         |
-| 9   | B9 (#241–270)          | —                            | —                         |
-| 10  | B10 (#271–300)         | —                            | —                         |
-| 11  | —                      | B1                           | —                         |
-| 12  | —                      | B2                           | —                         |
-| 13  | —                      | B3                           | —                         |
-| 14  | —                      | B4                           | —                         |
-| 15  | —                      | B5                           | —                         |
-| 16  | —                      | B6                           | —                         |
-| 17  | —                      | B7                           | —                         |
-| 18  | —                      | B8                           | —                         |
-| 19  | —                      | B9                           | —                         |
-| 20  | —                      | B10                          | —                         |
-| 21  | —                      | —                            | B1                        |
-| 22  | —                      | —                            | B2                        |
-| 23  | —                      | —                            | B3                        |
-| 24  | —                      | —                            | B4                        |
-| 25  | —                      | —                            | B5                        |
-| 26  | —                      | —                            | B6                        |
-| 27  | —                      | —                            | B7                        |
-| 28  | —                      | —                            | B8                        |
-| 29  | —                      | —                            | B9                        |
-| 30  | —                      | —                            | B10                       |
+1. Marks P3 as **optional** for the batches you've already finished P2 on.
+2. Redistributes the remaining touches into P2 (deepest) and P4 (speed).
+3. Logs a `plan_downgrade` event and keeps your level honest.
+
+End-state still meets the **≥ 3-pass floor** for every problem — i.e., you
+always hit scientific minimum for memory consolidation.
+
+## Pass definitions
+
+**P1 — Worked example + explain-back** (hybrid approach)
+- I show the problem and a **clean annotated Java solution**.
+- You explain every line, I probe with "why this data structure?", "what's the invariant?", "what breaks on empty input?".
+- You don't move on until you can justify every choice.
+- Save to `solutions/<topic>/<slug>.java`, update `problems/<slug>.md`.
+
+**P2 — Solo solve from problem**
+- I show the problem statement only.
+- You write Java from scratch. No peeking at Pass 1.
+- After: diff against your P1 code. Note divergences, decide which is better.
+
+**P3 — Timed retrieval**
+- Stopwatch. Target time per problem by difficulty: E=5min, M=10min, H=18min.
+- You solve or skip. Skipped problems auto-add to `weak-spots.md` with a bonus rep.
+
+**P4 — Verbal walkthrough**
+- Read title only. **Narrate aloud** (record yourself):
+  approach → data structures → invariant → edge cases → O(time)/O(space).
+- ≤ 2 min per problem. Any slip → weak-spot.
 
 ## Daily rituals
 
-**Morning (Pass 1 — ~10 hrs on learning days):**
-1. Open `curriculum.md`, find today's 30 new problems.
-2. For each: I pose the problem Socratically → you solve in Java →
-   save `solutions/<topic>/<slug>.java` + `problems/<slug>.md`.
-3. Log confidence 1–5 in `progress.md`.
-
-**Pass 2 (re-derive):**
-1. Open `problems/<slug>.md` and read **only** the problem statement.
-2. Re-derive the approach from memory. Write the Java from scratch in a temp file.
-3. Diff against your Pass-1 solution. Note divergences.
-4. Update confidence.
-
-**Pass 3 (speed):**
-1. Read each problem title only.
-2. **Verbal walkthrough** (record yourself or narrate to me): approach, invariant,
-   edge cases, complexity — in under 90 seconds.
-3. Any slip → add to `weak-spots.md` with a forced bonus rep the next morning.
-
-## Why this works (the science)
-
-- **Testing effect:** Pass 2 forces retrieval, not recognition. Retrieval > re-reading.
-- **Spacing effect:** 10-day gap puts each rep near the "desirable difficulty" boundary — slow recall, which strengthens memory more than fast recall.
-- **Interleaving inside each batch:** Each batch of 30 spans **multiple patterns** (by curriculum order), so you can't coast on one technique.
-- **Metacognitive calibration:** Confidence scores train you to predict your own recall — a skill that transfers to real interviews.
-
-## If you fall behind
-
-- **Never skip a Pass 2 or Pass 3** in favor of catching up Pass 1. Reviews > novelty.
-- Shift tomorrow's new batch; keep the review cadence sacred.
-- Missed reps degrade the spacing, not the coverage.
+**Start of day:** open `memory/state.json`, read `today` block (your problem list and target).
+**End of day:** append `day_close` event to `memory/events.jsonl`, my job to do.
+**Streak discipline:** zero skip days. 30-min minimum even on bad days — hit 1-2 P4 passes.

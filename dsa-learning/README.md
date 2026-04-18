@@ -1,31 +1,35 @@
-# DSA Learning System — 300 Problems in Java / 30 Days / 3 Passes
+# DSA Learning System — NeetCode 150 / Java / 30 Days / 4 Passes (hybrid)
 
-Goal: **deep pattern fluency** over 300 curated LeetCode / NeetCode problems in Java,
-using **spaced repetition** + **Socratic dialogue** so recall sticks.
+Goal: **Google-interview-ready DSA fluency** over the NeetCode 150, using
+**worked-example-then-retrieval** pedagogy + **4 spaced repetitions**, landing
+every problem at ≤ 15 min by Day 30.
 
 ## How it works
 
-- **300 problems** organized by pattern in `curriculum.md` (NeetCode 250 + 50 extensions).
-- **30-day schedule** in `schedule.md` — each problem is touched **at least 3×**:
-  - Pass 1 (Days 1–10): first exposure, build intuition, write solution with hints.
-  - Pass 2 (Days 11–20): re-derive from memory, no hints; compare to your Pass 1 code.
-  - Pass 3 (Days 21–30): speed pass — target ≤ 8 min/problem; verbal-walk-through only.
-- **Daily load:** 30 problems/day × 30 days = 900 touches = 300 problems × 3 reps.
-- **Your solutions** go in `solutions/<topic>/<slug>.java` (one per problem).
-- **Per-problem notes** live in `problems/<slug>.md` (pattern, pitfalls, complexity).
-- **Progress tracked** in `progress.md` — check off each rep, note confidence 1–5.
+- **150 problems** in `curriculum.md`, organized by 18 patterns (the full NeetCode 150).
+- **4 passes** over 30 days:
+  - **P1 (Days 1–10) — worked example + explain-back.** I show annotated Java; you explain every line; I probe.
+  - **P2 (Days 11–18) — solo.** Problem statement only. You write from scratch.
+  - **P3 (Days 19–24) — timed.** Stopwatch. E=5m, M=10m, H=18m.
+  - **P4 (Days 25–30) — verbal walkthrough.** ≤ 2 min per problem, narrated.
+- **Auto-downgrade:** if you fall 40 touches behind, the system drops P3 for affected batches (keeps the 3-pass scientific floor).
+- **Daily target:** ~20 touches/day average (15 on P1 days, 19 on P2, 25 on P3/P4).
+- **End-state target:** every problem solved ≤ 15 min by Day 30.
+- **Google readiness** is broader than DSA — see `google-readiness.md` for the full picture (system design, behavioral, mocks).
 
-## How I (Claude) teach
+## How I (Claude) teach — **hybrid**
 
-I don't give you the answer. I teach **Socratically**:
+- **Pass 1 (worked example + explain-back):** I show you a clean, annotated Java
+  solution. You explain every line — data structure choice, invariants, edge cases.
+  I probe with targeted questions. You don't advance until you own every choice.
+- **Passes 2/3/4 (retrieval):** I show problem only. You produce the code from
+  memory. This is where durable mastery is built.
 
-1. I present the problem and ask you what you notice.
-2. I ask guiding questions to lead you to the pattern.
-3. When you're stuck, I give the **smallest possible hint** — never the solution.
-4. You write the Java. I review. We dissect edge cases.
-5. We extract the **reusable pattern** and store it in `patterns.md`.
+This matches the **expertise reversal effect**: beginners benefit from worked
+examples, experienced solvers benefit from retrieval. We give you the right
+treatment at each stage.
 
-See `socratic-protocol.md` for the exact dialogue rules.
+See `socratic-protocol.md` for exact dialogue rules.
 
 ## Your daily workflow
 
