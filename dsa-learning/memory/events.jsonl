@@ -1,1 +1,4 @@
 {"ts":"2026-04-18T00:00:00Z","kind":"system","msg":"learning system initialized — Day 1 begins"}
+{"ts":"2026-04-19T00:00:00Z","kind":"system","msg":"plan re-scoped: NeetCode 150 x 4 passes x 30 days, hybrid pedagogy"}
+{"ts":"2026-04-19T00:30:00Z","kind":"attempt","slug":"001-contains-duplicate","pass":1,"mode":"worked-example","confidence":3,"time_min":25,"hints":2}
+{"ts":"2026-04-19T00:30:00Z","kind":"pattern_learned","name":"seen-set-membership","problem":"001-contains-duplicate"}

@@ -9,6 +9,28 @@ One-sentence rule: *if you can't write the template from memory, you don't own t
 
 ## (Empty — patterns you derive go here.)
 
+### Pattern 1 — Seen-set for membership check
+
+**Shape:**
+```java
+Set<T> seen = new HashSet<>();
+for (T x : input) {
+    if (!seen.add(x)) {
+        // x was already present — duplicate detected
+        return /* handle hit */;
+    }
+}
+// no hit
+```
+
+**When to reach for it:** you need to know "have I encountered this value before?" and nothing more (no count, no index).
+
+**Why it works:** HashSet.add returns `false` iff the element is already present. O(1) average per call via hashing.
+
+**Big-O:** O(n) time, O(n) space.
+
+**Problems using it:** #1 Contains Duplicate, and (preview) #9 Longest Consecutive, #37 Linked List Cycle (set-of-nodes version), #139 Happy Number.
+
 Expected entries by end of Day 10:
 
 1. Hash-map-for-complement (Two Sum family)

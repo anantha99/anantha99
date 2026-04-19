@@ -17,19 +17,19 @@
   },
   "overall": {
     "level": "Novice",
-    "level_score": 0,
-    "problems_attempted": 0,
+    "level_score": 1,
+    "problems_attempted": 1,
     "problems_solved_unaided": 0,
-    "p1_done": 0,
+    "p1_done": 1,
     "p2_done": 0,
     "p3_done": 0,
     "p4_done": 0,
-    "total_touches": 0,
+    "total_touches": 1,
     "touches_target": 600,
-    "average_confidence": null,
-    "median_solve_minutes": null,
-    "current_streak_days": 0,
-    "longest_streak_days": 0,
+    "average_confidence": 3.0,
+    "median_solve_minutes": 25,
+    "current_streak_days": 1,
+    "longest_streak_days": 1,
     "on_track": true,
     "deficit_touches": 0,
     "downgrade_triggered": false
@@ -40,8 +40,8 @@
     "phase": "P1",
     "batch": "B1",
     "target_touches": 15,
-    "completed_touches": 0,
-    "remaining_touches": 15,
+    "completed_touches": 1,
+    "remaining_touches": 14,
     "problems_in_scope": [
       "001-contains-duplicate","002-valid-anagram","003-two-sum","004-group-anagrams",
       "005-top-k-frequent-elements","006-encode-decode-strings","007-product-except-self",
@@ -84,7 +84,7 @@
     { "day": 30, "phase": "P4", "batches": ["B9:10","B10:15"], "target": 25, "completed": 0 }
   ],
   "patterns": {
-    "arrays-hashing":      { "level": "Novice", "proficiency": 0, "total":  9, "touched": 0, "avg_conf": null, "weak": 0 },
+    "arrays-hashing":      { "level": "Novice", "proficiency": 7, "total":  9, "touched": 1, "avg_conf": 3.0, "weak": 0 },
     "two-pointers":        { "level": "Novice", "proficiency": 0, "total":  5, "touched": 0, "avg_conf": null, "weak": 0 },
     "sliding-window":      { "level": "Novice", "proficiency": 0, "total":  6, "touched": 0, "avg_conf": null, "weak": 0 },
     "stack":               { "level": "Novice", "proficiency": 0, "total":  7, "touched": 0, "avg_conf": null, "weak": 0 },
@@ -103,7 +103,17 @@
     "math-geometry":       { "level": "Novice", "proficiency": 0, "total":  8, "touched": 0, "avg_conf": null, "weak": 0 },
     "bit-manipulation":    { "level": "Novice", "proficiency": 0, "total":  7, "touched": 0, "avg_conf": null, "weak": 0 }
   },
-  "problems": {},
+  "problems": {
+    "001-contains-duplicate": {
+      "lc": 217,
+      "pattern": "arrays-hashing",
+      "difficulty": "E",
+      "passes": [
+        { "pass": 1, "date": "2026-04-19", "confidence": 3, "time_min": 25, "hints": 2, "mode": "worked-example" }
+      ],
+      "mastery": 0.48
+    }
+  },
   "weak_spots": [],
   "history": []
 }
