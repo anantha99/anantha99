@@ -9,7 +9,7 @@ Format:
 
 ## Open
 
-*(empty — will fill as we go)*
+- [ ] #2 valid-anagram — P1 2026-04-19, conf 2. Reason: shaky on char arithmetic (`c - 'a'`) and the count-array invariant. Re-rep scheduled: 2026-04-21 (Day 3 morning, before B3).
 
 ## Resolved
 

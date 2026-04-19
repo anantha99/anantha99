@@ -31,6 +31,32 @@ for (T x : input) {
 
 **Problems using it:** #1 Contains Duplicate, and (preview) #9 Longest Consecutive, #37 Linked List Cycle (set-of-nodes version), #139 Happy Number.
 
+### Pattern 2 — Frequency-count array (alphabet indexing)
+
+**Shape:**
+```java
+int[] count = new int[26];          // 26 for a-z, 52 for Aa-Zz, 128 for ASCII
+for (char c : str.toCharArray()) {
+    count[c - 'a']++;               // map letter to index 0..25
+}
+```
+
+**The char-arithmetic trick:** `char` is stored as a number. `'c' - 'a' = 2`,
+giving a perfect index for a fixed-alphabet count array.
+
+**When to reach for it:** counting letter frequencies, detecting anagrams,
+character rolling hashes, sliding-window string problems with small alphabet.
+
+**Fixed-size ≠ O(n):** a loop over `count` (always 26 iterations) is O(1) in Big-O,
+regardless of input size.
+
+**When NOT to use it:** Unicode inputs — switch to `HashMap<Character, Integer>`.
+
+**Big-O:** O(n) time (single pass), O(1) space (fixed 26 slots).
+
+**Problems using it:** #2 Valid Anagram, (preview) #4 Group Anagrams, #17 Longest
+Repeating Char Replacement, #18 Permutation in String, #76 Minimum Window Substring.
+
 Expected entries by end of Day 10:
 
 1. Hash-map-for-complement (Two Sum family)
