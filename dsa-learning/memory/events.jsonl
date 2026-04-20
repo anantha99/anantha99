@@ -5,3 +5,5 @@
 {"ts":"2026-04-19T00:45:00Z","kind":"attempt","slug":"002-valid-anagram","pass":1,"mode":"worked-example","confidence":2,"time_min":15,"hints":3}
 {"ts":"2026-04-19T00:45:00Z","kind":"pattern_learned","name":"frequency-count-array","problem":"002-valid-anagram"}
 {"ts":"2026-04-19T00:45:00Z","kind":"weak_spot_added","slug":"002-valid-anagram","reason":"char arithmetic + count invariant","rep_due":"2026-04-21"}
+{"ts":"2026-04-19T01:00:00Z","kind":"attempt","slug":"003-two-sum","pass":1,"mode":"worked-example","confidence":3,"time_min":15,"hints":1}
+{"ts":"2026-04-19T01:00:00Z","kind":"pattern_learned","name":"complement-trick","problem":"003-two-sum"}

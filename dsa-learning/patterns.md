@@ -57,6 +57,32 @@ regardless of input size.
 **Problems using it:** #2 Valid Anagram, (preview) #4 Group Anagrams, #17 Longest
 Repeating Char Replacement, #18 Permutation in String, #76 Minimum Window Substring.
 
+### Pattern 3 — Complement trick (HashMap lookup for the other half)
+
+**Shape:**
+```java
+Map<Integer, Integer> seen = new HashMap<>();     // value → index
+for (int i = 0; i < nums.length; i++) {
+    int complement = target - nums[i];
+    if (seen.containsKey(complement)) {            // check FIRST
+        return new int[]{ seen.get(complement), i };
+    }
+    seen.put(nums[i], i);                          // then put
+}
+```
+
+**When to reach for it:** problems asking for **two values that combine to hit a target** (sum, product, XOR) in a single pass.
+
+**Why order matters:** `check → put` guarantees the match you find came from a *previous*
+iteration, preventing self-pairing on duplicate values like `[3,3]` with target 6.
+
+**Space-for-time tradeoff:** O(n²) naive → O(n) with O(n) map. Core interview theme.
+
+**Big-O:** O(n) time, O(n) space.
+
+**Problems using it:** #3 Two Sum, (preview) #12 3Sum (outer loop + complement inner),
+#22 Two Sum II (two-pointer variant), problems involving "find a pair summing to X."
+
 Expected entries by end of Day 10:
 
 1. Hash-map-for-complement (Two Sum family)

@@ -17,17 +17,17 @@
   },
   "overall": {
     "level": "Novice",
-    "level_score": 2,
-    "problems_attempted": 2,
+    "level_score": 4,
+    "problems_attempted": 3,
     "problems_solved_unaided": 0,
-    "p1_done": 2,
+    "p1_done": 3,
     "p2_done": 0,
     "p3_done": 0,
     "p4_done": 0,
-    "total_touches": 2,
+    "total_touches": 3,
     "touches_target": 600,
-    "average_confidence": 2.5,
-    "median_solve_minutes": 20,
+    "average_confidence": 2.67,
+    "median_solve_minutes": 15,
     "current_streak_days": 1,
     "longest_streak_days": 1,
     "on_track": true,
@@ -40,8 +40,8 @@
     "phase": "P1",
     "batch": "B1",
     "target_touches": 15,
-    "completed_touches": 2,
-    "remaining_touches": 13,
+    "completed_touches": 3,
+    "remaining_touches": 12,
     "problems_in_scope": [
       "001-contains-duplicate","002-valid-anagram","003-two-sum","004-group-anagrams",
       "005-top-k-frequent-elements","006-encode-decode-strings","007-product-except-self",
@@ -84,7 +84,7 @@
     { "day": 30, "phase": "P4", "batches": ["B9:10","B10:15"], "target": 25, "completed": 0 }
   ],
   "patterns": {
-    "arrays-hashing":      { "level": "Novice", "proficiency": 10, "total":  9, "touched": 2, "avg_conf": 2.5, "weak": 1 },
+    "arrays-hashing":      { "level": "Novice", "proficiency": 14, "total":  9, "touched": 3, "avg_conf": 2.67, "weak": 1 },
     "two-pointers":        { "level": "Novice", "proficiency": 0, "total":  5, "touched": 0, "avg_conf": null, "weak": 0 },
     "sliding-window":      { "level": "Novice", "proficiency": 0, "total":  6, "touched": 0, "avg_conf": null, "weak": 0 },
     "stack":               { "level": "Novice", "proficiency": 0, "total":  7, "touched": 0, "avg_conf": null, "weak": 0 },
@@ -121,6 +121,15 @@
         { "pass": 1, "date": "2026-04-19", "confidence": 2, "time_min": 15, "hints": 3, "mode": "worked-example" }
       ],
       "mastery": 0.30
+    },
+    "003-two-sum": {
+      "lc": 1,
+      "pattern": "arrays-hashing",
+      "difficulty": "E",
+      "passes": [
+        { "pass": 1, "date": "2026-04-19", "confidence": 3, "time_min": 15, "hints": 1, "mode": "worked-example" }
+      ],
+      "mastery": 0.52
     }
   },
   "weak_spots": [
