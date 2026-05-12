@@ -7,3 +7,6 @@
 {"ts":"2026-04-19T00:45:00Z","kind":"weak_spot_added","slug":"002-valid-anagram","reason":"char arithmetic + count invariant","rep_due":"2026-04-21"}
 {"ts":"2026-04-19T01:00:00Z","kind":"attempt","slug":"003-two-sum","pass":1,"mode":"worked-example","confidence":3,"time_min":15,"hints":1}
 {"ts":"2026-04-19T01:00:00Z","kind":"pattern_learned","name":"complement-trick","problem":"003-two-sum"}
+{"ts":"2026-04-19T01:20:00Z","kind":"attempt","slug":"004-group-anagrams","pass":1,"mode":"worked-example","confidence":2,"time_min":20,"hints":5,"retrieval_skipped":true}
+{"ts":"2026-04-19T01:20:00Z","kind":"foundations_taught","topics":["reference-vs-content-equality","java-lambdas"]}
+{"ts":"2026-04-19T01:20:00Z","kind":"weak_spot_added","slug":"004-group-anagrams","reason":"retrieval skipped","rep_due":"2026-04-21"}
